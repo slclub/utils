@@ -26,6 +26,12 @@ func Test_IS_STRUCT(t *testing.T) {
 	assert.False(t, _IS_STRUCT("I am not "))
 }
 
+func Test_IS_SLICE(t *testing.T) {
+	s1 := []int{1, 2, 3, 2}
+	assert.True(t, _IS_SLICE(s1))
+	assert.False(t, _IS_SLICE(2))
+}
+
 func needGetMyNameFunc() {}
 
 type stu struct{}

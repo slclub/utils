@@ -34,3 +34,11 @@ func _IS_STRUCT(stu interface{}) bool {
 	}
 	return false
 }
+
+// check is slice
+func _IS_SLICE(s interface{}) bool {
+	if reflect.ValueOf(s).Kind() == reflect.Slice {
+		return true
+	}
+	return false
+}
