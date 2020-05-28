@@ -13,13 +13,17 @@ go get github.com/slclub/utils
 
 - strings
   - [strings bytes convenient](https://github.com/slclub/utils/blob/master/bytesconv/bytesconv.go) [writer@gin](https://github.com/gin-gonic/gin/tree/master/internal/bytesconv)
-```go import("github.com/slclub/utils/bytesconv") ```  
+  
+```go 
+import("github.com/slclub/utils/bytesconv") 
+```  
+
 - generator number
   - [grange](https://github.com/slclub/utils/blob/master/grange.go)
 
 - reflect functions
 
-There is a better suggestion to match the validte package
+There is a better suggestion to match the [validator](https://github.com/go-playground/validator) package
 
   - [_FUNC_NAME](https://github.com/slclub/utils/blob/master/reflect.go)
   - [_IS_FUNC](https://github.com/slclub/utils/blob/master/reflect.go)
