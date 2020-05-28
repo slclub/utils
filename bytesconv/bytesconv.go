@@ -5,6 +5,8 @@ import (
 	"unsafe"
 )
 
+// author	@gin-gonic.		the god of gin
+
 // StringToBytes converts string to byte slice without a memory allocation.
 func StringToBytes(s string) (b []byte) {
 	sh := *(*reflect.StringHeader)(unsafe.Pointer(&s))
