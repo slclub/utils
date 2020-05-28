@@ -3,6 +3,8 @@ Collect some go functions with good performance and convenient.
 
 like Stings and byte convertion. generator.
 
+There is a better suggestion to match the [validator](https://github.com/go-playground/validator) package
+
 ## Install
 
 ```go
@@ -22,9 +24,6 @@ import("github.com/slclub/utils/bytesconv")
   - [grange](https://github.com/slclub/utils/blob/master/grange.go)
 
 - reflect functions
-
-There is a better suggestion to match the [validator](https://github.com/go-playground/validator) package
-
   - [_FUNC_NAME](https://github.com/slclub/utils/blob/master/reflect.go)
   - [_IS_FUNC](https://github.com/slclub/utils/blob/master/reflect.go)
   - [_IS_STRUCT](https://github.com/slclub/utils/blob/master/reflect.go)
