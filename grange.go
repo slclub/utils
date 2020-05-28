@@ -1,30 +1,35 @@
 package utils
 
 import (
-	//"fmt"
-	"sync"
+//"fmt"
+//"sync"
+//"fmt"
 )
 
 // go generator.
 // generato numbers can be used by range loop.
 // Get numbers iteratively
-var do_once_range sync.Once
 
 func grange(start int, after int) chan int {
 	var ch = make(chan int, 1)
+	plug := 1
 	if after < start {
-		start, after = after, start
+		//start, after = after, start
+		plug = -1
 	}
-	f1 := func() {
+	//fmt.Println("I am runing!!!!!!!!")
 
-		go func(start int, after int) {
-			for i := start; i < after; i++ {
-				ch <- i
+	go func() {
+		i := start
+		for {
+			if i == after {
+				break
 			}
-			close(ch)
-		}(start, after)
-	}
+			ch <- i
+			i += plug
+		}
+		close(ch)
+	}()
 
-	do_once_range.Do(f1)
 	return ch
 }
