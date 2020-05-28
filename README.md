@@ -15,14 +15,14 @@ go get github.com/slclub/utils
 
 - strings  [writer@gin](https://github.com/gin-gonic/gin/tree/master/internal/bytesconv)
   - [strings bytes convenient](https://github.com/slclub/utils/blob/master/bytesconv/bytesconv.go) 
-  - StringToBytes(s string) (b []byte)   0 allocs/op
-  - BytesToString(b []byte) string       0 allocs/op
+    - StringToBytes(s string) (b []byte)   0 allocs/op
+    - BytesToString(b []byte) string       0 allocs/op
 ```go 
 import("github.com/slclub/utils/bytesconv") 
 ```  
 
 - generator number
-  - [grange](https://github.com/slclub/utils/blob/master/grange.go)
+    - [grange](https://github.com/slclub/utils/blob/master/grange.go)
 
 - reflect functions
   - [_FUNC_NAME](https://github.com/slclub/utils/blob/master/reflect.go)
