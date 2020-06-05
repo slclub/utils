@@ -209,3 +209,15 @@ func TestSwapInterface(t *testing.T) {
 	a, b = b, a
 	fmt.Println("interface type swap 2, string", a, b)
 }
+
+func TestSlice(t *testing.T) {
+	s1 := []int{1, 2, 3, 4, 5}
+
+	s2 := append(s1[:2], s1[3:]...)
+	fmt.Println("new slice:", s2, "new len:", len(s2))
+}
+
+func TestAnonymousFunction(t *testing.T) {
+	abc := func() { fmt.Println("I am an anonymous function.") }
+	fmt.Println("[ANONYMOUS][NAME]", _FUNC_NAME(abc))
+}
