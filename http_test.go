@@ -39,6 +39,17 @@ func TestGetMapFromUrl(t *testing.T) {
 	assert.Equal(t, "com", q["b"])
 }
 
+func TestGetPartFilterTrimOrSemicolon(t *testing.T) {
+	s := "application/html;"
+	s_ret := GetPartFilterTrimOrSemicolon(s)
+	assert.Equal(t, s[:len(s)-1], s_ret)
+
+	s = "application/html"
+	s_ret = GetPartFilterTrimOrSemicolon(s)
+	assert.Equal(t, s, s_ret)
+
+}
+
 func TestUrlPartErrorException(t *testing.T) {
 
 	u, _ := url.Parse("http://www.baidu.com/search?q=dotnet")

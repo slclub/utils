@@ -55,3 +55,14 @@ func GetMapFromUrl(mv url.Values, key string) (map[string]string, bool) {
 }
 
 // URL======================================================================
+// Request header===========================================================
+func GetPartFilterTrimOrSemicolon(content string) string {
+	for i, char := range content {
+		if char == ' ' || char == ';' {
+			return content[:i]
+		}
+	}
+	return content
+}
+
+// Request header===========================================================
