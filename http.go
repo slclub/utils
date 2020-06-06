@@ -12,13 +12,17 @@ func GetStringFromUrl(mv url.Values, key string) (value string, ret bool) {
 	if mv == nil {
 		return "", false
 	}
-	for k, s := range mv {
-		if k == key && len(s) >= 1 {
-			value = s[0]
-			ret = true
-			return
-		}
+	value_arr, ret := mv[key]
+	if len(value_arr) >= 1 {
+		return value_arr[0], true
 	}
+	//for k, s := range mv {
+	//	if k == key && len(s) >= 1 {
+	//		value = s[0]
+	//		ret = true
+	//		return
+	//	}
+	//}
 	return "", false
 }
 
@@ -26,6 +30,11 @@ func GetStringFromUrl(mv url.Values, key string) (value string, ret bool) {
 func GetArrayFromUrl(mv url.Values, key string) ([]string, bool) {
 	sl := make([]string, 0)
 	ret := false
+
+	sl, ret = mv[key]
+	if ret {
+		return sl, ret
+	}
 
 	for k, s := range mv {
 		if i := strings.IndexByte(k, '['); i >= 1 && k[:i] == key {
