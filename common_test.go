@@ -219,5 +219,5 @@ func TestSlice(t *testing.T) {
 
 func TestAnonymousFunction(t *testing.T) {
 	abc := func() { fmt.Println("I am an anonymous function.") }
-	fmt.Println("[ANONYMOUS][NAME]", _FUNC_NAME(abc))
+	fmt.Println("[ANONYMOUS][NAME]", FUNC_NAME(abc))
 }

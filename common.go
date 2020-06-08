@@ -192,7 +192,7 @@ func InSliceIntDynamic(a interface{}, b interface{}) int {
 	if !ok {
 		return -1
 	}
-	if !_IS_SLICE(a) {
+	if !IS_SLICE(a) {
 		return -1
 	}
 
