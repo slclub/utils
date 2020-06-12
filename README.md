@@ -31,7 +31,8 @@ import("github.com/slclub/utils/bytesconv")
   - [InSlice](https://github.com/slclub/utils/blob/master/common.go)
   
 - HTTP url parseparam.
-  - [GetStringFromUrl(mv url.Values, key string) (value string, ret bool)] (https://github.com/slclub/utils/blob/master/http.go)
+  - [GetStringFromUrl(mv url.Values, key string) (value string, ret bool)](https://github.com/slclub/utils/blob/master/http.go)
+  
   - [GetArrayFromUrl(mv url.Values, key string) ([]string, bool)](https://github.com/slclub/utils/blob/master/http.go)
   - [GetMapFromUrl(mv url.Values, key string) (map[string]string, bool)](https://github.com/slclub/utils/blob/master/http.go)
-  -[GetPartFilterTrimOrSemicolon(content string) string](https://github.com/slclub/utils/blob/master/http.go)
+  - [GetPartFilterTrimOrSemicolon(content string) string](https://github.com/slclub/utils/blob/master/http.go)
