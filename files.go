@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"io/ioutil"
 	"os"
 )
 
@@ -18,4 +19,20 @@ func IsFileExist(path string) (bool, error) {
 	}
 
 	return false, err
+}
+
+// Read all  contents from file.
+func ReadAll(file string) (string, bool) {
+	f, err := os.Open(file)
+	if err != nil {
+		return "", false
+	}
+	defer f.Close()
+
+	fd, err := ioutil.ReadAll(f)
+	if err != nil {
+		return "", false
+	}
+
+	return string(fd), true
 }

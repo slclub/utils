@@ -18,3 +18,14 @@ func TestFileExist(t *testing.T) {
 	fmt.Println("[UTIL][FILE][EXIST]", err)
 	assert.False(t, ret)
 }
+
+func TestReadAll(t *testing.T) {
+
+	s1, ok := ReadAll("/tmp/noexist")
+	assert.False(t, ok)
+	assert.Empty(t, s1)
+
+	s1, ok = ReadAll("files.go")
+	assert.True(t, ok)
+	assert.NotEmpty(t, s1)
+}
