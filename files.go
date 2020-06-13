@@ -23,16 +23,22 @@ func IsFileExist(path string) (bool, error) {
 
 // Read all  contents from file.
 func ReadAll(file string) (string, bool) {
+	content, ok := ReadAllByte(file)
+	return string(content), ok
+}
+
+// Read all  contents from file.
+func ReadAllByte(file string) ([]byte, bool) {
 	f, err := os.Open(file)
 	if err != nil {
-		return "", false
+		return nil, false
 	}
 	defer f.Close()
 
 	fd, err := ioutil.ReadAll(f)
 	if err != nil {
-		return "", false
+		return nil, false
 	}
 
-	return string(fd), true
+	return (fd), true
 }
