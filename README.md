@@ -25,7 +25,14 @@ import("github.com/slclub/utils/bytesconv")
     - [grange](https://github.com/slclub/utils/blob/master/grange.go)
 
 - reflect functions
-  - [_FUNC_NAME](https://github.com/slclub/utils/blob/master/reflect.go)
-  - [_IS_FUNC](https://github.com/slclub/utils/blob/master/reflect.go)
-  - [_IS_STRUCT](https://github.com/slclub/utils/blob/master/reflect.go)
+  - [FUNC_NAME](https://github.com/slclub/utils/blob/master/reflect.go)
+  - [IS_FUNC](https://github.com/slclub/utils/blob/master/reflect.go)
+  - [IS_STRUCT](https://github.com/slclub/utils/blob/master/reflect.go)
   - [InSlice](https://github.com/slclub/utils/blob/master/common.go)
+  
+- HTTP url parseparam.
+  - [GetStringFromUrl(mv url.Values, key string) (value string, ret bool)](https://github.com/slclub/utils/blob/master/http.go)
+  
+  - [GetArrayFromUrl(mv url.Values, key string) ([]string, bool)](https://github.com/slclub/utils/blob/master/http.go)
+  - [GetMapFromUrl(mv url.Values, key string) (map[string]string, bool)](https://github.com/slclub/utils/blob/master/http.go)
+  - [GetPartFilterTrimOrSemicolon(content string) string](https://github.com/slclub/utils/blob/master/http.go)
