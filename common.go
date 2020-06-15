@@ -2,7 +2,27 @@ package utils
 
 import (
 	"reflect"
+	"runtime"
 )
+
+var EOL = "\n"
+
+func init() {
+	if !IsUnix() {
+		EOL = "\r\n"
+	}
+}
+
+// Judging unix system.
+// Unix*
+func IsUnix() bool {
+	sys_type := runtime.GOOS
+
+	if sys_type == "windows" {
+		return false
+	}
+	return true
+}
 
 // Verify that different types are empty. especially interface{}
 // int 0 is return true

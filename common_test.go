@@ -221,3 +221,11 @@ func TestAnonymousFunction(t *testing.T) {
 	abc := func() { fmt.Println("I am an anonymous function.") }
 	fmt.Println("[ANONYMOUS][NAME]", FUNC_NAME(abc))
 }
+
+// judging system type and EOL value
+func TestSystemTypeAndEOL(t *testing.T) {
+	ret := IsUnix()
+	assert.True(t, ret)
+
+	assert.Equal(t, "\n", EOL)
+}
