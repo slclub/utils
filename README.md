@@ -20,6 +20,21 @@ go get github.com/slclub/utils
 ```go 
 import("github.com/slclub/utils/bytesconv") 
 ```  
+- IsUnix() bool
+- EOL
+
+```go
+example:
+  // linux "\n"
+  // windows "\r\n"
+  utils.EOL
+example:
+  if utils.IsUnix() {
+    do something in unix
+  } else {
+    do something in windows.
+  }
+```
 
 - generator number
     - [grange](https://github.com/slclub/utils/blob/master/grange.go)
