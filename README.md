@@ -19,9 +19,10 @@ go get github.com/slclub/utils
     - BytesToString(b []byte) string       0 allocs/op
 ```go 
 import("github.com/slclub/utils/bytesconv") 
-```  
-- IsUnix() bool
-- EOL
+``` 
+- common
+  - IsUnix() bool
+  - EOL
 
 ```go
 example:
